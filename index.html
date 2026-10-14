@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAQ-VISION | Plataforma Educativa 3D</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="cabecera">
+    <a class="marca" href="#inicio">
+      <strong>MAQ-<span>VISION</span></strong>
+      <small>PLATAFORMA EDUCATIVA 3D</small>
+    </a>
+
+    <nav class="navegacion" aria-label="Navegación principal">
+      <a href="#inicio" class="activo">⌂ Inicio</a>
+      <a href="#maquinarias">Maquinarias</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#manual">Manual</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-fondo"></div>
+      <div class="hero-sombra"></div>
+
+      <div class="hero-contenido">
+        <p class="sobretitulo">PLATAFORMA EDUCATIVA 3D</p>
+
+        <h1>
+          Explora.<br>
+          Aprende.<br>
+          <span>Innova.</span>
+        </h1>
+
+        <p class="hero-descripcion">
+          Descubre la maquinaria pesada mediante
+          modelos tridimensionales interactivos
+          e información técnica de sus componentes.
+        </p>
+
+        <a class="boton-principal" href="#maquinarias">
+          EXPLORAR MAQUINARIAS <span>→</span>
+        </a>
+      </div>
+
+      <aside class="panel-herramientas"
+             aria-label="Herramientas de exploración">
+
+        <button class="herramienta seleccionada"
+                data-panel="vista">
+          <span class="herramienta-icono">▣</span>
+          Vista 3D
+        </button>
+
+        <button class="herramienta"
+                data-panel="componentes">
+          <span class="herramienta-icono">⚙</span>
+          Componentes
+        </button>
+
+        <button class="herramienta"
+                data-panel="hidraulica">
+          <span class="herramienta-icono">◉</span>
+          Sistema hidráulico
+        </button>
+
+        <button class="herramienta"
+                data-panel="informacion">
+          <span class="herramienta-icono">▤</span>
+          Información técnica
+        </button>
+
+        <button class="herramienta"
+                data-panel="manual">
+          <span class="herramienta-icono">▥</span>
+          Manual de servicio
+        </button>
+      </aside>
+
+      <div class="indicaciones-visor">
+        <span>◈ Vista de referencia</span>
+        <span>Modelo 3D próximamente</span>
+      </div>
+    </section>
+
+    <section class="catalogo" id="maquinarias">
+      <div class="catalogo-encabezado">
+        <div>
+          <p class="seccion-etiqueta">CATÁLOGO DE EQUIPOS</p>
+          <h2>EXPLORA NUESTRAS MAQUINARIAS</h2>
+          <div class="linea-roja"></div>
+        </div>
+
+        <p>
+          Selecciona un equipo para conocer sus
+          componentes y acceder a información técnica.
+        </p>
+      </div>
+
+      <div class="tarjetas">
+        <article class="tarjeta tarjeta-excavadora">
+          <div class="tarjeta-capa"></div>
+          <div class="tarjeta-contenido">
+            <span class="numero">01</span>
+            <h3>EXCAVADORA</h3>
+            <p>
+              Explora sus componentes físicos,
+              mecánicos e hidráulicos.
+            </p>
+            <button class="boton-rojo" id="abrirExcavadora">
+              EXPLORAR EQUIPO →
+            </button>
+          </div>
+        </article>
+
+        <article class="tarjeta tarjeta-harvester">
+          <div class="tarjeta-capa"></div>
+          <div class="tarjeta-contenido">
+            <span class="numero numero-gris">02</span>
+            <h3>HARVESTER</h3>
+            <p>
+              Equipo forestal considerado
+              para una futura ampliación.
+            </p>
+            <button class="boton-bloqueado" disabled>
+              ♙ PRÓXIMAMENTE
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="sobre-proyecto" id="nosotros">
+      <p class="seccion-etiqueta">INNOVACIÓN EDUCATIVA</p>
+      <h2>¿QUÉ ES MAQ-VISION?</h2>
+      <p>
+        MAQ-VISION es una propuesta de plataforma web
+        educativa para apoyar el aprendizaje de maquinaria
+        pesada mediante visualización tridimensional,
+        identificación de componentes y fichas técnicas.
+      </p>
+    </section>
+
+    <section class="manual-seccion" id="manual">
+      <div>
+        <p class="seccion-etiqueta">RECURSOS EDUCATIVOS</p>
+        <h2>MANUAL TÉCNICO</h2>
+        <p>
+          Esta sección incorporará material educativo
+          propio sobre funcionamiento, fallas frecuentes
+          y mantenimiento de componentes.
+        </p>
+      </div>
+      <span class="etiqueta-proximamente">EN DESARROLLO</span>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div>
+      <strong>MAQ-<span>VISION</span></strong>
+      <p>Plataforma educativa de maquinaria pesada</p>
+    </div>
+    <p>Proyecto de innovación · 2026</p>
+  </footer>
+
+  <!-- PANEL DE INFORMACIÓN -->
+  <div class="modal-oscuro" id="modal" hidden>
+    <div class="modal-contenido"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="modalTitulo">
+
+      <button class="cerrar-modal"
+              id="cerrarModal"
+              aria-label="Cerrar panel">×</button>
+
+      <p class="seccion-etiqueta">MAQ-VISION</p>
+      <h2 id="modalTitulo">Información</h2>
+      <div id="modalTexto"></div>
+      <button class="boton-rojo" id="aceptarModal">
+        ENTENDIDO
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
